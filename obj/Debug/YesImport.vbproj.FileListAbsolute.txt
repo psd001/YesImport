@@ -1,0 +1,11 @@
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\bin\Debug\YesImport.exe.config
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\bin\Debug\YesImport.exe
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\bin\Debug\YesImport.pdb
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\bin\Debug\YesImport.xml
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.vbprojResolveAssemblyReference.cache
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.Resources.resources
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.vbproj.GenerateResource.Cache
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.exe
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.xml
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.pdb
+c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.frmYESFileImport.resources
