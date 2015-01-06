@@ -3,10 +3,6 @@ Imports System.Windows.Forms.VisualStyles
 
 Public Class frmYESFileImport
 
-	Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-	End Sub
-
 	Private Sub btnYesImport_Click(sender As Object, e As EventArgs) Handles btnYesImport.Click
 
 		YesImportFile.Title = "Please Select a CSV File"
