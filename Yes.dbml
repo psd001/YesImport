@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="YES" Class="YesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Localhost;Initial Catalog=YES;Integrated Security=True" SettingsObjectName="YesImport.My.MySettings" SettingsPropertyName="YESConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.YES29063" Member="YES29063s">
+    <Type Name="YES29063">
+      <Column Name="StreetNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StreetName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Suffix" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zipcode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustCode_CYES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OptIn_flag" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Missed_OPTIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
