@@ -78,7 +78,7 @@ Partial Class frmYESFileImport
 		'Label1
 		'
 		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(33, 174)
+		Me.Label1.Location = New System.Drawing.Point(35, 96)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(138, 17)
 		Me.Label1.TabIndex = 4
@@ -86,7 +86,7 @@ Partial Class frmYESFileImport
 		'
 		'txtStreet
 		'
-		Me.txtStreet.Location = New System.Drawing.Point(169, 174)
+		Me.txtStreet.Location = New System.Drawing.Point(179, 96)
 		Me.txtStreet.Name = "txtStreet"
 		Me.txtStreet.Size = New System.Drawing.Size(526, 22)
 		Me.txtStreet.TabIndex = 5

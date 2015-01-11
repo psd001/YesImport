@@ -39,7 +39,6 @@ Public Class frmYESFileImport
 
 		Dim YesList = From line In allLines _
 		Let parts = line.Split(",") _
-		Where parts(7).Trim() = "OPTIN" _
 		Select New With {.StreetNum = parts(0), .StreetName = parts(1), .Suffix = parts(2), .City = parts(3), .State = parts(4), .Street = parts(5), .CustCode_CYES = parts(6), .OptIn_flag = parts(7), .Missed_OPTIN = parts(8)}
 
 		Cursor = Cursors.Default
@@ -49,6 +48,7 @@ Public Class frmYESFileImport
 		For Each yes In YesList
 			txtStreet.Text = yes.Street
 			txtStreet.Refresh()
+
 		Next
 
 		btnProcessImportFile.Enabled = True
