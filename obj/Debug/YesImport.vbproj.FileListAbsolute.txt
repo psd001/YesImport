@@ -9,3 +9,14 @@ c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\D
 c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.xml
 c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.pdb
 c:\users\pcweiss\documents\visual studio 2013\Projects\YesImport\YesImport\obj\Debug\YesImport.frmYESFileImport.resources
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\bin\Debug\YesImport.exe.config
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\bin\Debug\YesImport.exe
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\bin\Debug\YesImport.pdb
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\bin\Debug\YesImport.xml
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.vbprojResolveAssemblyReference.cache
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.frmYESFileImport.resources
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.Resources.resources
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.vbproj.GenerateResource.Cache
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.exe
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.xml
+C:\Users\pcweiss\Documents\Visual Studio 2013\Projects\YesImport\obj\Debug\YesImport.pdb
