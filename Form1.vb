@@ -45,34 +45,51 @@ Public Class frmYESFileImport
 
 		Me.Refresh()
 
+		Dim db As New YesDataContext
+
 		For Each yes In YesList
 			txtStreet.Text = yes.Street
 			txtStreet.Refresh()
 
-			Dim yesord As New YES29063 With _
-				{.StreetNum = yes.StreetNum, _
-				 .StreetName = yes.StreetName, _
-				 .Suffix = yes.Suffix, _
-				 .City = yes.City, _
-				 .State = yes.State, _
-				 .Street = yes.Street, _
-				 .CustCode_CYES = yes.CustCode_CYES, _
-				 .OptIn_flag = yes.OptIn_flag, _
-				 .Missed_OPTIN = yes.Missed_OPTIN
-				}
-			Dim db As New YesDataContext
+			'  IF yes exists with OPTIN
 
-			db.YES29063s.InsertOnSubmit(yesord)
+			If yes.City.Trim.ToUpper = "IRMO" Then
 
-			Try
-				db.SubmitChanges()
+				Dim yesord As New YES29063 With _
+					{.StreetNum = yes.StreetNum, _
+					 .StreetName = yes.StreetName, _
+					 .Suffix = yes.Suffix, _
+					 .City = yes.City, _
+					 .State = yes.State, _
+					 .Street = yes.Street, _
+					 .CustCode_CYES = yes.CustCode_CYES, _
+					 .OptIn_flag = yes.OptIn_flag, _
+					 .Missed_OPTIN = yes.Missed_OPTIN
+					}
 
-			Catch ex As Exception
-				' Need to handle duplicate keys
+				db.YES29063s.InsertOnSubmit(yesord)
+
+				Try
+					db.SubmitChanges()
+				Catch ex As System.Data.Linq.DuplicateKeyException
+					Dim dataerror = ex.HResult
+					If dataerror <> -2146233079 Then
+						Throw ex
+					End If
+				Catch ex As System.Data.SqlClient.SqlException
+					Dim dataerror = ex.ErrorCode
+					If dataerror <> -2146232060 Then
+						Throw ex
+					End If
+
+				Catch ex As Exception
+					' Need to handle duplicate keys
 
 
-				Throw ex
-			End Try
+					Throw ex
+				End Try
+			End If
+
 		Next
 
 		btnProcessImportFile.Enabled = True
