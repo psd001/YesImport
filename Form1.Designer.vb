@@ -29,6 +29,7 @@ Partial Class frmYESFileImport
 		Me.btnExit = New System.Windows.Forms.Button()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.txtStreet = New System.Windows.Forms.TextBox()
+		Me.lblStatus = New System.Windows.Forms.Label()
 		Me.SuspendLayout()
 		'
 		'btnProcessImportFile
@@ -91,11 +92,20 @@ Partial Class frmYESFileImport
 		Me.txtStreet.Size = New System.Drawing.Size(526, 22)
 		Me.txtStreet.TabIndex = 5
 		'
+		'lblStatus
+		'
+		Me.lblStatus.AutoSize = True
+		Me.lblStatus.Location = New System.Drawing.Point(179, 170)
+		Me.lblStatus.Name = "lblStatus"
+		Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+		Me.lblStatus.TabIndex = 6
+		'
 		'frmYESFileImport
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(1701, 505)
+		Me.Controls.Add(Me.lblStatus)
 		Me.Controls.Add(Me.txtStreet)
 		Me.Controls.Add(Me.Label1)
 		Me.Controls.Add(Me.btnExit)
@@ -116,5 +126,6 @@ Partial Class frmYESFileImport
 	Friend WithEvents btnExit As System.Windows.Forms.Button
 	Friend WithEvents Label1 As System.Windows.Forms.Label
 	Friend WithEvents txtStreet As System.Windows.Forms.TextBox
+	Friend WithEvents lblStatus As System.Windows.Forms.Label
 
 End Class

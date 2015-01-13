@@ -51,43 +51,55 @@ Public Class frmYESFileImport
 			txtStreet.Text = yes.Street
 			txtStreet.Refresh()
 
-			'  IF yes exists with OPTIN
+			Dim dc As YesDataContext = New YesDataContext()
 
-			If yes.City.Trim.ToUpper = "IRMO" Then
+			Dim theYES = From yessub In dc.YES29063s
+						 Where (yessub.Street = yes.Street)
+						Select yessub
 
-				Dim yesord As New YES29063 With _
-					{.StreetNum = yes.StreetNum, _
-					 .StreetName = yes.StreetName, _
-					 .Suffix = yes.Suffix, _
-					 .City = yes.City, _
-					 .State = yes.State, _
-					 .Street = yes.Street, _
-					 .CustCode_CYES = yes.CustCode_CYES, _
-					 .OptIn_flag = yes.OptIn_flag, _
-					 .Missed_OPTIN = yes.Missed_OPTIN
-					}
+			If Not theYES.Any Then
 
-				db.YES29063s.InsertOnSubmit(yesord)
+				'  IF yes exists with OPTIN
 
-				Try
-					db.SubmitChanges()
-				Catch ex As System.Data.Linq.DuplicateKeyException
-					Dim dataerror = ex.HResult
-					If dataerror <> -2146233079 Then
+				If yes.City.Trim.ToUpper = "IRMO" Then
+
+					Dim yesord As New YES29063 With _
+						{.StreetNum = yes.StreetNum, _
+						 .StreetName = yes.StreetName, _
+						 .Suffix = yes.Suffix, _
+						 .City = yes.City, _
+						 .State = yes.State, _
+						 .Street = yes.Street, _
+						 .CustCode_CYES = yes.CustCode_CYES, _
+						 .OptIn_flag = yes.OptIn_flag, _
+						 .Missed_OPTIN = yes.Missed_OPTIN
+						}
+
+					db.YES29063s.InsertOnSubmit(yesord)
+
+					Try
+						db.SubmitChanges()
+					Catch ex As System.Data.Linq.DuplicateKeyException
+						Dim dataerror = ex.HResult
+						If dataerror <> -2146233079 Then
+							Throw ex
+						End If
+					Catch ex As System.Data.SqlClient.SqlException
+						Dim dataerror = ex.ErrorCode
+						If dataerror <> -2146232060 Then
+							Throw ex
+						End If
+
+					Catch ex As Exception
+						' Need to handle duplicate keys
+
+
 						Throw ex
-					End If
-				Catch ex As System.Data.SqlClient.SqlException
-					Dim dataerror = ex.ErrorCode
-					If dataerror <> -2146232060 Then
-						Throw ex
-					End If
-
-				Catch ex As Exception
-					' Need to handle duplicate keys
-
-
-					Throw ex
-				End Try
+					End Try
+				End If
+			Else
+				lblStatus.Text = "Skipping - " & yes.Street
+				lblStatus.Refresh()
 			End If
 
 		Next
