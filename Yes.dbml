@@ -14,4 +14,19 @@
       <Column Name="Missed_OPTIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.YES29063Pending" Member="YES29063Pendings">
+    <Type Name="YES29063Pending">
+      <Column Name="Action" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StreetNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StreetName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Suffix" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Zipcode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustCode_CYES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OptIn_flag" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Missed_OPTIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

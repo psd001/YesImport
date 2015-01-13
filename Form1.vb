@@ -91,13 +91,11 @@ Public Class frmYESFileImport
 						End If
 
 					Catch ex As Exception
-						' Need to handle duplicate keys
-
-
 						Throw ex
 					End Try
 				End If
 			Else
+
 				lblStatus.Text = "Skipping - " & yes.Street
 				lblStatus.Refresh()
 			End If
