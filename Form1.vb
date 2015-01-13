@@ -61,7 +61,7 @@ Public Class frmYESFileImport
 
 				'  IF yes exists with OPTIN
 
-				If yes.City.Trim.ToUpper = "IRMO" Then
+				If yes.City.Trim.ToUpper = "IRMO" And yes.CustCode_CYES.Contains("YES29063") Then
 
 					Dim yesord As New YES29063 With _
 						{.StreetNum = yes.StreetNum, _
@@ -93,6 +93,38 @@ Public Class frmYESFileImport
 					Catch ex As Exception
 						Throw ex
 					End Try
+
+					Dim yespend As New YES29063Pending With _
+						{.StreetNum = yes.StreetNum, _
+						 .StreetName = yes.StreetName, _
+						 .Suffix = yes.Suffix, _
+						 .City = yes.City, _
+						 .State = yes.State, _
+						 .Street = yes.Street, _
+						 .CustCode_CYES = yes.CustCode_CYES, _
+						 .OptIn_flag = yes.OptIn_flag, _
+						 .Missed_OPTIN = yes.Missed_OPTIN, _
+						 .Action = If(.OptIn_flag = "#N/A", "INSERT", If(.OptIn_flag = "OPTIN", "START", "UNKNOWN"))}
+
+					db.YES29063Pendings.InsertOnSubmit(yespend)
+
+					Try
+						db.SubmitChanges()
+					Catch ex As System.Data.Linq.DuplicateKeyException
+						Dim dataerror = ex.HResult
+						If dataerror <> -2146233079 Then
+							Throw ex
+						End If
+					Catch ex As System.Data.SqlClient.SqlException
+						Dim dataerror = ex.ErrorCode
+						If dataerror <> -2146232060 Then
+							Throw ex
+						End If
+
+					Catch ex As Exception
+						Throw ex
+					End Try
+
 				End If
 			Else
 
