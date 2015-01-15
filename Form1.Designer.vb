@@ -34,20 +34,19 @@ Partial Class frmYESFileImport
 		'
 		'btnProcessImportFile
 		'
-		Me.btnProcessImportFile.Location = New System.Drawing.Point(36, 240)
-		Me.btnProcessImportFile.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+		Me.btnProcessImportFile.Enabled = False
+		Me.btnProcessImportFile.Location = New System.Drawing.Point(27, 195)
 		Me.btnProcessImportFile.Name = "btnProcessImportFile"
-		Me.btnProcessImportFile.Size = New System.Drawing.Size(100, 28)
+		Me.btnProcessImportFile.Size = New System.Drawing.Size(75, 23)
 		Me.btnProcessImportFile.TabIndex = 0
 		Me.btnProcessImportFile.Text = "Process"
 		Me.btnProcessImportFile.UseVisualStyleBackColor = True
 		'
 		'btnYesImport
 		'
-		Me.btnYesImport.Location = New System.Drawing.Point(36, 43)
-		Me.btnYesImport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+		Me.btnYesImport.Location = New System.Drawing.Point(27, 35)
 		Me.btnYesImport.Name = "btnYesImport"
-		Me.btnYesImport.Size = New System.Drawing.Size(109, 28)
+		Me.btnYesImport.Size = New System.Drawing.Size(82, 23)
 		Me.btnYesImport.TabIndex = 1
 		Me.btnYesImport.Text = "Choose file :"
 		Me.btnYesImport.UseVisualStyleBackColor = True
@@ -55,10 +54,9 @@ Partial Class frmYESFileImport
 		'lblYesFile
 		'
 		Me.lblYesFile.AutoSize = True
-		Me.lblYesFile.Location = New System.Drawing.Point(155, 54)
-		Me.lblYesFile.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+		Me.lblYesFile.Location = New System.Drawing.Point(116, 44)
 		Me.lblYesFile.Name = "lblYesFile"
-		Me.lblYesFile.Size = New System.Drawing.Size(0, 17)
+		Me.lblYesFile.Size = New System.Drawing.Size(0, 13)
 		Me.lblYesFile.TabIndex = 2
 		'
 		'YesImportFile
@@ -68,10 +66,9 @@ Partial Class frmYESFileImport
 		'
 		'btnExit
 		'
-		Me.btnExit.Location = New System.Drawing.Point(210, 240)
-		Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+		Me.btnExit.Location = New System.Drawing.Point(158, 195)
 		Me.btnExit.Name = "btnExit"
-		Me.btnExit.Size = New System.Drawing.Size(100, 28)
+		Me.btnExit.Size = New System.Drawing.Size(75, 23)
 		Me.btnExit.TabIndex = 3
 		Me.btnExit.Text = "Exit App"
 		Me.btnExit.UseVisualStyleBackColor = True
@@ -79,32 +76,35 @@ Partial Class frmYESFileImport
 		'Label1
 		'
 		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(35, 96)
+		Me.Label1.Location = New System.Drawing.Point(26, 78)
+		Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(138, 17)
+		Me.Label1.Size = New System.Drawing.Size(103, 13)
 		Me.Label1.TabIndex = 4
 		Me.Label1.Text = "Processing Address:"
 		'
 		'txtStreet
 		'
-		Me.txtStreet.Location = New System.Drawing.Point(179, 96)
+		Me.txtStreet.Location = New System.Drawing.Point(134, 78)
+		Me.txtStreet.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
 		Me.txtStreet.Name = "txtStreet"
-		Me.txtStreet.Size = New System.Drawing.Size(526, 22)
+		Me.txtStreet.Size = New System.Drawing.Size(396, 20)
 		Me.txtStreet.TabIndex = 5
 		'
 		'lblStatus
 		'
 		Me.lblStatus.AutoSize = True
-		Me.lblStatus.Location = New System.Drawing.Point(179, 170)
+		Me.lblStatus.Location = New System.Drawing.Point(134, 138)
+		Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblStatus.Name = "lblStatus"
-		Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+		Me.lblStatus.Size = New System.Drawing.Size(0, 13)
 		Me.lblStatus.TabIndex = 6
 		'
 		'frmYESFileImport
 		'
-		Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(1701, 505)
+		Me.ClientSize = New System.Drawing.Size(1276, 410)
 		Me.Controls.Add(Me.lblStatus)
 		Me.Controls.Add(Me.txtStreet)
 		Me.Controls.Add(Me.Label1)
@@ -112,7 +112,6 @@ Partial Class frmYESFileImport
 		Me.Controls.Add(Me.lblYesFile)
 		Me.Controls.Add(Me.btnYesImport)
 		Me.Controls.Add(Me.btnProcessImportFile)
-		Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
 		Me.Name = "frmYESFileImport"
 		Me.Text = "YES File Import"
 		Me.ResumeLayout(False)

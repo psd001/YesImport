@@ -8,7 +8,7 @@ Public Class frmYESFileImport
 		YesImportFile.Title = "Please Select a CSV File"
 
 		YesImportFile.InitialDirectory = "C:\"
-
+		YesImportFile.Filter = "csv files (*.csv)|*.txt|All files (*.*)|*.*"
 		YesImportFile.ShowDialog()
 
 	End Sub
@@ -23,13 +23,14 @@ Public Class frmYESFileImport
 
 
 		lblYesFile.Text = YesImportFile.FileName.ToString()
-
+		btnProcessImportFile.Enabled = True
 
 	End Sub
 
 	Private Sub btnProcessImportFile_Click(sender As Object, e As EventArgs) Handles btnProcessImportFile.Click
 
-		btnProcessImportFile.Enabled = False
+		btnExit.Enabled = False
+		btnYesImport.Enabled = False
 
 		Cursor = Cursors.WaitCursor
 
@@ -134,7 +135,10 @@ Public Class frmYESFileImport
 
 		Next
 
-		btnProcessImportFile.Enabled = True
+		btnYesImport.Enabled = False
+		btnProcessImportFile.Enabled = False
+		btnExit.Enabled = True
+
 
 	End Sub
 
